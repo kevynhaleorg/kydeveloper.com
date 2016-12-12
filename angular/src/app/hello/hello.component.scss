@@ -1,0 +1,42 @@
+@import '../colors';
+
+p {
+	font-size: 60px;
+	text-align: center;
+	color: $c1;
+	font-family: Play;
+	margin-top: 25px;
+
+	img {
+		height:80px;
+		width:80px;
+		border-radius:80px;
+		background-color:red;
+	}
+
+	span.special {
+		color:$a1;
+	}
+	span.white {
+		opacity:.7;
+		font-size:50px;
+		font-family: 'Righteous', sans-serif;
+		margin-top:25px;
+		display:block;
+		margin-bottom:10px;
+	}
+	span.orange {
+		color:orange;
+	}
+	span.gold {
+		color:gold;
+	}
+	span.purple {
+		color: #ff7600;
+	}
+	span.style {
+		color:#6fc6fd;
+		font-family:'Exo', sans-serif;
+		font-weight:100;
+	}
+}

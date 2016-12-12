@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import './app/colors';
+
+html {
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	//background-color: $b1;
+	background-color: #273542;
+	height:100%;
+	width:100%;
+}
