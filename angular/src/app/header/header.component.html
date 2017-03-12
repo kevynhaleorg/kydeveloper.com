@@ -6,25 +6,28 @@
 	 			KyDeveloper
 	 		</li>
  		</a>
- 		<a routerLink="/hello" routerLinkActive="selected">
+ 		<a class="menu-button" (click)="toggleTitle($event)">
+ 			<i class="material-icons">menu</i>
+ 		</a>
+ 		<a routerLink="/hello" routerLinkActive="selected" class="title-button" [class.show-title]="showTitle" >
  			<li >HELLO</li>
  		</a>
- 		<a routerLink="/intro" routerLinkActive="selected">
+ 		<a routerLink="/intro" routerLinkActive="selected" class="title-button" [class.show-title]="showTitle">
  			<li>INTRO</li>
  		</a>
- 		<a routerLink="/skills" routerLinkActive="selected">
+ 		<a routerLink="/skills" routerLinkActive="selected" class="title-button" [class.show-title]="showTitle">
  			<li>SKILLS</li>
  		</a>
- 		<a routerLink="/portfolio" routerLinkActive="selected">
+ 		<a routerLink="/portfolio" routerLinkActive="selected" class="title-button" [class.show-title]="showTitle">
  			<li>PORTFOLIO</li>
  		</a>
- 		<a routerLink="/about" routerLinkActive="selected">
+ 		<a routerLink="/about" routerLinkActive="selected" class="title-button" [class.show-title]="showTitle">
  			<li>ABOUT</li>
  		</a>
- 		<a routerLink="/contact" routerLinkActive="selected">
+ 		<a routerLink="/contact" routerLinkActive="selected" class="title-button" [class.show-title]="showTitle">
  			<li>CONTACT</li>
  		</a>
- 		<a href="http://blog.kydeveloper.com">
+ 		<a href="http://blog.kydeveloper.com" class="title-button" [class.show-title]="showTitle">
  			<li>BLOG</li>
  		</a>
  	</ul>
