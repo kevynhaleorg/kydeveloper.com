@@ -1,6 +1,5 @@
 @import '../colors';
 
-
 nav {
 	position:fixed;
 	top: 0;
@@ -84,7 +83,7 @@ nav {
     				display:none;
     				opacity: 0;
     				height:0;
-    				border-top:1px solid #e67c89;
+    				border-top:1px solid $a1;
   				}
 
   				&.show-title {
@@ -109,12 +108,14 @@ nav {
   				text-align: center;
   				float: right;
   				margin-top: -60px;
+  				color: $b1;
 
 
   				i {
   					text-align: center;
 				    line-height: 60px;
 				    font-size: 30px;
+
   				}
 
   				&:hover {

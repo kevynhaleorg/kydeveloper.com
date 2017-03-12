@@ -14,11 +14,15 @@ import { SkillsModule } from './skills/skills.module'
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component'
+import { FooterComponent } from './footer/footer.component'
+import { SideIconsComponent } from './sideicons/sideicons.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent,
+    SideIconsComponent
   ],
   imports: [
     BrowserModule,
