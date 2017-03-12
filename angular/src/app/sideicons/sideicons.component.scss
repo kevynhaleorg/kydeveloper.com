@@ -20,6 +20,8 @@ div {
 			line-height: 40px;
 			background-color:#3a737c;
 			transition: background-color 0.5s ease;
+			-webkit-animation: fadeIn 3s;
+    		animation: fadeIn 3s;
 
 			li {
 				
@@ -49,4 +51,15 @@ div {
 			}
 		}
 	}
+}
+
+@-webkit-keyframes fadeIn {
+    0% { width: 0; }
+    75%{ width: 0; }
+    100%{ width: 40px; }
+}  
+@keyframes fadeIn {
+    0% { width: 0; }
+    75%{ width: 0; }
+    100%{ width: 40px; }
 }

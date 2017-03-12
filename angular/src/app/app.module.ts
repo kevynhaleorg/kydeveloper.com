@@ -7,7 +7,7 @@ import { AppRouterModule } from './app-routing.module'
 import { AboutModule } from './about/about.module'
 import { ContactModule } from './contact/contact.module'
 import { HelloModule } from './hello/hello.module'
-import { IntroModule } from './intro/intro.module'
+import { BlogModule } from './blog/blog.module'
 import { PortfolioModule } from './portfolio/portfolio.module'
 import { SkillsModule } from './skills/skills.module'
 
@@ -32,7 +32,7 @@ import { SideIconsComponent } from './sideicons/sideicons.component'
     AboutModule,
     ContactModule,
     HelloModule,
-    IntroModule,
+    BlogModule,
     PortfolioModule,
     SkillsModule
   ],

@@ -4,7 +4,7 @@ import { CommonModule }   from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 
-import { IntroComponent } from './intro.component';
+import { BlogComponent } from './blog.component';
 
 
 @NgModule({
@@ -14,8 +14,8 @@ import { IntroComponent } from './intro.component';
     FormsModule
   ],
   declarations: [
-    IntroComponent
+    BlogComponent
   ],
   providers: []
 })
-export class IntroModule {}
+export class BlogModule {}
