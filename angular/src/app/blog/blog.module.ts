@@ -5,6 +5,10 @@ import { RouterModule } from '@angular/router';
 
 
 import { BlogComponent } from './blog.component';
+import { BlogAllComponent } from './all/blog-all.component';
+import { BlogAllPreviewComponent } from './all/preview/blog-all-preview.component';
+
+import { BlogService } from './blog.service'
 
 
 @NgModule({
@@ -14,8 +18,10 @@ import { BlogComponent } from './blog.component';
     FormsModule
   ],
   declarations: [
-    BlogComponent
+    BlogComponent,
+    BlogAllComponent,
+    BlogAllPreviewComponent
   ],
-  providers: []
+  providers: [BlogService]
 })
 export class BlogModule {}
