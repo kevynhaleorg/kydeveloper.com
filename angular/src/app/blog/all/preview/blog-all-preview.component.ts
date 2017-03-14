@@ -1,5 +1,6 @@
 import { Component, Input} from '@angular/core';
 import { Post } from '../../post'
+import { BlogService } from '../../blog.service'
 
 @Component({
   selector: 'app-blog-all-preview',
@@ -10,6 +11,9 @@ export class BlogAllPreviewComponent {
 
 	@Input() post: Post;
 
+	constructor(
+		blogService: BlogService) {
+	}
 	ngOnInit(){
 
 	}

@@ -21,6 +21,8 @@ export class BlogAllComponent {
   	}
 
   	ngOnInit() {
+  		this.setPosts()
+
   		this.blogService.getPosts()
       		.subscribe(posts => this.setPosts())
 

@@ -31,7 +31,7 @@ export class BlogService {
 	}
 
 	getPosts(): Observable<any> {
-		let url =  this._wpBase + "posts"
+		let url =  this._wpBase + "posts?_embed"
 		let headers    = new Headers({'Content-Type': 'application/json'})
 		let options    = new RequestOptions({ headers: headers })			
 		return this.http.get(url, options)
