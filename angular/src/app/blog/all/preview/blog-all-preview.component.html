@@ -2,12 +2,16 @@
 	<div class="gutter"></div>
 		<div class="middle">
 			<div class="featureimage">
-				<img src="{{post._embedded['wp:featuredmedia'][0].source_url}}">
+				<a routerLink="/blog/post/{{post.id}}">
+					<img src="{{post._embedded['wp:featuredmedia'][0].source_url}}">
+				</a>
 			</div>
 			<div class="middlegutter"></div>
 			<div class="postdetails">
 				<div class="date">{{post.date}}</div>
-				<div class="title">{{post.title.rendered}}</div>		
+				<a routerLink="/blog/post/{{post.id}}">
+					<div class="title">{{post.title.rendered}}</div>	
+				</a>	
 				<!-- <div>{{post._embedded.author[0].name}}</div> -->
 				<div class="body" [innerHTML]="post.excerpt.rendered"></div>
 				<div class="tags">

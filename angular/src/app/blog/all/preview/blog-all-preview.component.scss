@@ -2,6 +2,9 @@
 
 $light: #d6d6d6;
 
+a, a:active, a:visited, a:focus{
+	text-decoration: none;
+}
 .post {
 	width: 100%;
 	display:flex;

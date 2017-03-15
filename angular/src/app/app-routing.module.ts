@@ -12,6 +12,7 @@ import { ContactComponent } from './contact/contact.component'
 
 import { BlogComponent } from './blog/blog.component'
 import { BlogAllComponent } from './blog/all/blog-all.component'
+import { BlogSingleComponent } from './blog/single/blog-single.component'
 
 @NgModule({
   imports: [
@@ -33,6 +34,10 @@ import { BlogAllComponent } from './blog/all/blog-all.component'
           { 
             path: '', 
             component: BlogAllComponent
+          },
+          {
+             path: 'post/:id', 
+             component: BlogSingleComponent
           }
         ]
       },

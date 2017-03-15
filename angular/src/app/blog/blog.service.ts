@@ -3,7 +3,7 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/share';
 import 'rxjs/add/operator/map';
-
+import 'rxjs/add/operator/catch';
 import {Observer} from 'rxjs/Observer'
 
 import { Post } from './post'
@@ -47,6 +47,15 @@ export class BlogService {
 
 	retPosts() {
 		return this.posts;
+	}
+
+	getPostById(id: string): Observable<any> {
+		let url =  this._wpBase + "posts/" + id
+		let headers    = new Headers({'Content-Type': 'application/json'})
+		let options    = new RequestOptions({ headers: headers })			
+		return this.http.get(url, options)
+				.map((res:Response) => res.json())
+
 	}
 
 }

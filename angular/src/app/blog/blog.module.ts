@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { BlogComponent } from './blog.component';
 import { BlogAllComponent } from './all/blog-all.component';
+import { BlogSingleComponent } from './single/blog-single.component';
 import { BlogAllPreviewComponent } from './all/preview/blog-all-preview.component';
 
 import { BlogService } from './blog.service'
@@ -20,7 +21,8 @@ import { BlogService } from './blog.service'
   declarations: [
     BlogComponent,
     BlogAllComponent,
-    BlogAllPreviewComponent
+    BlogAllPreviewComponent,
+    BlogSingleComponent
   ],
   providers: [BlogService]
 })
