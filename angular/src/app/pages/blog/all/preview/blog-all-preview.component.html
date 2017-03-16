@@ -1,0 +1,25 @@
+<div class="post">
+	<div class="gutter"></div>
+		<div class="middle">
+			<div class="featureimage">
+				<a routerLink="/blog/post/{{post.id}}">
+					<img src="{{post.featuredmedia.source_url}}">
+				</a>
+			</div>
+			<div class="middlegutter"></div>
+			<div class="postdetails">
+				<div class="date">{{post.date}}</div>
+				<a routerLink="/blog/post/{{post.id}}">
+					<div class="title">{{post.title}}</div>	
+				</a>	
+				<!-- <div>{{post._embedded.author[0].name}}</div> -->
+				<div class="body" [innerHTML]="post.excerpt"></div>
+				<div class="tags">
+					<ul>
+						<li *ngFor="let tag of post.terms" >{{tag.name}}</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	<div class="gutter"></div>
+</div>

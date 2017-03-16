@@ -4,18 +4,18 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppRouterModule } from './app-routing.module'
-import { AboutModule } from './about/about.module'
-import { ContactModule } from './contact/contact.module'
-import { HelloModule } from './hello/hello.module'
-import { BlogModule } from './blog/blog.module'
-import { PortfolioModule } from './portfolio/portfolio.module'
-import { SkillsModule } from './skills/skills.module'
+import { AboutModule } from './pages/about/about.module'
+import { ContactModule } from './pages/contact/contact.module'
+import { HelloModule } from './pages/hello/hello.module'
+import { BlogModule } from './pages/blog/blog.module'
+import { PortfolioModule } from './pages/portfolio/portfolio.module'
+import { SkillsModule } from './pages/skills/skills.module'
 
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component'
-import { FooterComponent } from './footer/footer.component'
-import { SideIconsComponent } from './sideicons/sideicons.component'
+import { HeaderComponent } from './components/header/header.component'
+import { FooterComponent } from './components/footer/footer.component'
+import { SideIconsComponent } from './components/sideicons/sideicons.component'
 
 @NgModule({
   declarations: [

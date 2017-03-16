@@ -1,0 +1,28 @@
+<nav [class.show-title]="showTitle">
+ 	<ul>
+ 		<a class="logo">
+	 		<li>
+	 			<img src="images/logocolor.png">
+	 			KyDeveloper
+	 		</li>
+ 		</a>
+ 		<a class="menu-button" (click)="toggleTitle($event)">
+ 			<i class="material-icons">menu</i>
+ 		</a>
+ 		<a routerLink="/hello" routerLinkActive="selected" class="title-button" [class.show-title]="showTitle" >
+ 			<li >HELLO</li>
+ 		</a>
+ 		<a routerLink="/skills" routerLinkActive="selected" class="title-button" [class.show-title]="showTitle">
+ 			<li>SKILLS</li>
+ 		</a>
+ 		<a routerLink="/portfolio" routerLinkActive="selected" class="title-button" [class.show-title]="showTitle">
+ 			<li>PORTFOLIO</li>
+ 		</a>
+ 		<a routerLink="/about" routerLinkActive="selected" class="title-button" [class.show-title]="showTitle">
+ 			<li>ABOUT</li>
+ 		</a>
+ 		<a routerLink="/blog" routerLinkActive="selected" class="title-button" [class.show-title]="showTitle">
+ 			<li>BLOG</li>
+ 		</a>
+ 	</ul>
+</nav>

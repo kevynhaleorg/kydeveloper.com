@@ -1,0 +1,65 @@
+@import '../../colors';
+
+div {
+	position:fixed;
+	top:130px;
+	right:0px;
+	z-index:5;
+
+	
+	ul {
+		list-style-type:none;
+		margin:0px;
+		padding:0px;
+
+		a, a:active, a:visited, a:focus {
+			width: 40px;
+			height:40px;
+			margin-bottom: 5px;
+			display:block;
+			line-height: 40px;
+			background-color:#3a737c;
+			transition: background-color 0.5s ease;
+			-webkit-animation: fadeIconIn 3s;
+    		animation: fadeIconIn 3s;
+
+			li {
+				
+				font-size: 25px;
+				text-align:center;
+				color:white;
+
+				i {
+					position:relative;
+					top: 4px;
+					font-size:30px;
+				}
+
+			}
+
+			&:hover {
+				cursor:pointer;
+				&.linkedin {
+					background-color:#0077B5;
+				}	
+				&.github {
+					background-color:#6e5494;
+				}	
+				&.email {
+					background-color: #cc2e2e;
+				}
+			}
+		}
+	}
+}
+
+@-webkit-keyframes fadeIconIn {
+    0% { width: 0; }
+    75%{ width: 0; }
+    100%{ width: 40px; }
+}  
+@keyframes fadeIconIn {
+    0% { width: 0; }
+    75%{ width: 0; }
+    100%{ width: 40px; }
+}

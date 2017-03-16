@@ -1,0 +1,138 @@
+@import '../../colors';
+
+nav {
+	position:fixed;
+	top: 0;
+	height:60px;
+	background-color: $a2;
+	width: 100%;
+	box-shadow: 0px 0px 10px #13191f;
+	z-index:10;
+
+	&.show-title {
+		z-index: 15;
+	}
+
+	ul {
+		list-style:none;
+		margin: 0px;
+		padding: 0px;
+		height: 100%;
+		vertical-align: middle;
+		width: 100%;
+		display: flex;
+
+		@media screen and (max-width: $headbreak) {
+    		display:block;
+  		}
+
+		a, a:active, a:visited, a:focus{
+			flex: 1 1 15%;
+			text-decoration:none;
+				
+			li {
+				
+				height: 100%;
+				text-align:center;
+				line-height: 60px;
+				font-family: 'Play', sans-serif;
+				color: $b1;	
+
+				&:hover {
+					background-color: $a3;
+					cursor:pointer;
+					color: white;
+				}	
+			}
+
+			&.selected {
+					li {
+						background-color: $a1;
+						color: white;
+					}
+				}
+
+			&.logo {
+
+					flex: 1 1 30%;
+
+
+
+				li {
+					color: white;
+					font-family: 'Exo', sans-serif;
+					font-size:25px;
+					text-shadow: 0px 0px 2px $a1;
+					display:flex;	
+					line-height: 60px;
+					text-align:left;
+					img {
+						height: 60px;
+						margin-right:0px;
+					}
+					
+					&:hover {
+						background-color: $a2;
+						cursor: pointer;
+					}	
+				}	
+
+			}
+
+			&.title-button {
+				display:block;
+				background-color:$a2;
+
+				@media screen and (max-width: $headbreak) {
+    				display:none;
+    				opacity: 0;
+    				height:0;
+    				border-top:1px solid $a1;
+  				}
+
+  				&.show-title {
+  					position:relative;
+  					z-index:15;
+  					display: block;
+  					height: auto;
+  					opacity: 1;
+  					-webkit-animation: fadeIn .25s;
+    				animation: fadeIn .25s;
+  					-webkit-animation: fadeInHeight .25s;
+    				animation: fadeInHeight .25s;
+  				}
+
+			}
+
+			&.menu-button {
+				@media screen and (min-width: $headbreak) {
+    				display:none;
+  				}
+
+  				width:60px;
+  				display:inline-block;
+  				text-align: center;
+  				float: right;
+  				margin-top: -60px;
+  				color: $b1;
+
+
+  				i {
+  					text-align: center;
+				    line-height: 60px;
+				    font-size: 30px;
+
+  				}
+
+  				&:hover {
+  					color:white;
+  					cursor: pointer;
+  					background-color: $a3;
+  				}
+
+			}
+		}
+	}
+
+}
+

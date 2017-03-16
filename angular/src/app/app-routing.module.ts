@@ -3,16 +3,16 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
-import { HelloComponent } from './hello/hello.component'
+import { HelloComponent } from './pages/hello/hello.component'
 
-import { SkillsComponent } from './skills/skills.component'
-import { PortfolioComponent } from './portfolio/portfolio.component'
-import { AboutComponent } from './about/about.component'
-import { ContactComponent } from './contact/contact.component'
+import { SkillsComponent } from './pages/skills/skills.component'
+import { PortfolioComponent } from './pages/portfolio/portfolio.component'
+import { AboutComponent } from './pages/about/about.component'
+import { ContactComponent } from './pages/contact/contact.component'
 
-import { BlogComponent } from './blog/blog.component'
-import { BlogAllComponent } from './blog/all/blog-all.component'
-import { BlogSingleComponent } from './blog/single/blog-single.component'
+import { BlogComponent } from './pages/blog/blog.component'
+import { BlogAllComponent } from './pages/blog/all/blog-all.component'
+import { BlogSingleComponent } from './pages/blog/single/blog-single.component'
 
 @NgModule({
   imports: [

@@ -1,0 +1,11 @@
+@import '../../colors';
+
+footer {
+	width: calc(100% - 30px);
+	background-color:$a3;
+	height:20px;
+	padding:15px;
+	text-align:center;
+	color:$b1;
+	font-family: 'Exo', sans-serif;
+}

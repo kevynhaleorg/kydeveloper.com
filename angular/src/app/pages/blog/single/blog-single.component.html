@@ -1,0 +1,9 @@
+<div *ngIf="post">
+{{post.date}}
+</div>
+<div *ngIf="invalid">
+	<div class="error">
+	Unable to find the post you were looking for.
+	</div>
+	<app-blog-all></app-blog-all>
+</div>
