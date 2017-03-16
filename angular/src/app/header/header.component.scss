@@ -9,6 +9,10 @@ nav {
 	box-shadow: 0px 0px 10px #13191f;
 	z-index:10;
 
+	&.show-title {
+		z-index: 15;
+	}
+
 	ul {
 		list-style:none;
 		margin: 0px;
@@ -87,6 +91,8 @@ nav {
   				}
 
   				&.show-title {
+  					position:relative;
+  					z-index:15;
   					display: block;
   					height: auto;
   					opacity: 1;

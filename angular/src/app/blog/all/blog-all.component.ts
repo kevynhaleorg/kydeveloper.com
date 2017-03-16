@@ -13,8 +13,6 @@ export class BlogAllComponent {
 
 	private posts: Post[] = [];
 
-	private postsSubscription: any;
-
 	constructor(
   	private blogService: BlogService) {
   	
@@ -26,8 +24,13 @@ export class BlogAllComponent {
   		this.blogService.getPosts()
       		.subscribe(posts => this.setPosts())
 
-      	this.postsSubscription = this.blogService.postsChange$.subscribe(
+      	this.blogService.postsChange$.subscribe(
       		content => this.setPosts());
+
+        this.blogService.filterChange$.subscribe(
+          filter => this.blogService.getPostsFiltered(filter)
+                      .subscribe(posts => this.setPosts())
+          );
 
   	}
 

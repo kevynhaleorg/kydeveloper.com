@@ -15,6 +15,8 @@ export class BlogService {
 
 	post: Post;
 	posts: Post[];
+	filter: string;
+	blogNav: boolean = true;
 
 	postsChange$: any;
 	private _postsObserver: Observer<any>;
@@ -22,12 +24,30 @@ export class BlogService {
 	postChange$: any;
 	private _postObserver: Observer<any>;
 
+	filterChange$: any;
+	private _filterObserver: Observer<any>;
+
+	blogNavChange$: any;
+	private _blogNavObserver: Observer<any>;
+
+	filterLoadingChange$: any;
+	private _filterLoadingObserver: Observer<any>;
+
 	constructor(private http: Http) {
 		this.postsChange$ = new Observable(observer =>
 		this._postsObserver = observer).share();
 
 		this.postChange$ = new Observable(observer =>
 		this._postObserver = observer).share();
+
+		this.filterChange$ = new Observable(observer =>
+		this._filterObserver = observer).share();
+
+		this.blogNavChange$ = new Observable(observer =>
+		this._blogNavObserver = observer).share();
+
+		this.filterLoadingChange$ = new Observable(observer =>
+		this._filterLoadingObserver = observer).share();
 	}
 
 	getPosts(): Observable<any> {
@@ -56,6 +76,32 @@ export class BlogService {
 		return this.http.get(url, options)
 				.map((res:Response) => res.json())
 
+	}
+
+	setFilter(filter: string) {
+		this.filter = filter;
+		console.log(this.filter)
+		this._filterObserver.next(this.filter);
+	}
+
+	getPostsFiltered(filter: string) {
+		console.log(filter)
+		let url =  this._wpBase + "posts?search=" + filter +"&_embed"
+		let headers    = new Headers({'Content-Type': 'application/json'})
+		let options    = new RequestOptions({ headers: headers })			
+		return this.http.get(url, options)
+			.map(response => this.setPosts(response.json()),
+				this._filterLoadingObserver.next(true)
+				)
+	}
+
+	toggleBlogNav() {
+		this.blogNav = !this.blogNav
+		this._blogNavObserver.next(this.blogNav);
+	}
+
+	getBlogNav() {
+		return this.blogNav;
 	}
 
 }

@@ -1,5 +1,127 @@
 @import '../colors';
 
+.toggle-nav {
+	font-size: 40px;
+	color: #aaaaaa;
+	transition: color 500ms ease;
+
+	&:hover {
+		cursor: pointer;
+		color: $a1;
+	}
+
+}
+nav {
+	position: fixed;
+	top:60px;
+	left:-45px;
+	width: calc(100% + 45px);
+	height:50px;
+	max-height: 50px;
+	z-index:13;
+	background-color: #ebebeb;
+	margin:0px;
+  	-webkit-transition: max-height 0.5s;
+	-moz-transition: max-height 0.5s;
+	transition: max-height 0.5s;
+	overflow:hidden;
+
+	&.hide-nav {
+		max-height:0px;
+	}
+	.title {
+		width: 100%;
+		font-family: 'Exo', sans-serif;
+		color:$a3;
+		display: flex;
+		max-height:50px;
+		div {
+			flex: 1 1 20%;
+			&.center {
+				flex: 1 1 60%;
+				line-height:50px;
+				//background-color:$a3;
+				//text-align:center;
+				position:relative;
+
+				input {
+					width: calc(100% - 135px);
+				    height: 46px;
+				    border-top: 0px;
+				    border-left: 0px;
+				    border-right: 0px;
+				    border-bottom:2px solid #d6d6d6;
+				    font-size: 30px;
+				    background-color: #ebebeb;
+				    padding-left:90px;
+				    padding-right:45px;
+				    transition : border 500ms linear;
+				    color:$a2;
+				    font-weight:300;
+
+				    &:focus {
+				    	outline:none;
+				    	border-bottom:2px solid $c1;
+				    }
+
+				    &.loading-hide {
+				    	padding-right: 75px;
+				    	width: calc(100% - 165px);
+				    }
+				}
+
+				span {
+					position:absolute;
+
+					i {
+						position:relative;
+						top:5px;
+					}
+				}
+
+				.close {
+				    position: absolute;
+				    top: 5px;
+				    right: 3px;
+				}
+
+				.loading {
+					position: absolute;
+					top:9px;
+					right: 35px;
+					font-size: 35px;
+					color: #aaaaaa;
+    				animation: rotating 1.5s linear infinite;
+    				opacity:1;
+    				transition: opacity .3s ease;
+				}
+
+				i.loading-hide {
+					opacity: 0;
+				}
+				
+
+
+			}
+
+			&.left {
+				margin-left:45px;
+			}
+		}
+	}
+	@media screen and (max-width: 600px) {
+		.title {
+			div {
+				flex: 1 1 5%;
+
+				&.center {
+					flex: 1 1 90%;
+				}
+			}
+		}
+	}
+}
+
 .blog-body {
 	background-color:white;
 	width: 100%;
@@ -9,9 +131,16 @@
 	padding: 15px 45px 15px 45px;
 	position:relative;
 
+	.open {
+		position: fixed;
+		right: 2px; 
+		top: 65px;
+	}
+
 	.inner {
 		min-height:500px;
 		position:relative;
+		padding-top:50px;
 
 	}
 }

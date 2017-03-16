@@ -1,4 +1,18 @@
+<nav [class.hide-nav]="!showNav">
+	<div class="title">
+		<div class="left"></div>
+		<div class="center">
+			<span (click)="inputFocus(filter)"><i class="material-icons">search</i>kyblog</span>
+			<input #filter type="text"  name="search" placeholder="search" (input)="searchPostsChange($event.target.value)" [class.loading-hide]="!hideLoading">
+			<i class="material-icons toggle-nav close" (click)="toggleBlogNav()">keyboard_arrow_up</i>
+			<i class="material-icons loading" [class.loading-hide]="hideLoading">autorenew</i>
+		</div>
+		<div></div>
+	</div>
+</nav>
+
 <div class="blog-body">
+	<i class="material-icons toggle-nav open" (click)="toggleBlogNav();inputFocus(filter)">keyboard_arrow_down</i>
 	<div class="inner">
 		<router-outlet></router-outlet>
 	</div>
