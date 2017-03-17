@@ -4,6 +4,10 @@ import { FeaturedMedia } from './featuredmedia'
 import { Reply } from './reply'
 
 export class Post {
+
+	constructor() {
+		this.featuredmedia = new FeaturedMedia();
+	}
 	id: number;
 	date: string;
 	modified: string;

@@ -1,6 +1,15 @@
-<div *ngIf="post">
-{{post.date}}
+<div class="post">
+	<div class="gutter"></div>
+		<div class="middle">
+			<div class="title">{{post.title}}</div>
+			<div class="featuredimage">
+				<img src="{{post.featuredmedia.source_url}}">
+			</div>
+			<div class="body" [innerHTML]="post.content"></div>
+		</div>
+	<div class="gutter"></div>
 </div>
+
 <div *ngIf="invalid">
 	<div class="error">
 	Unable to find the post you were looking for.

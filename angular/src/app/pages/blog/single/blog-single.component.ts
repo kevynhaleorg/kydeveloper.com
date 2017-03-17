@@ -16,7 +16,7 @@ export class BlogSingleComponent {
 
 	private subscription:any;
 	private id: string;
-	private post: Post;
+	private post: Post = new Post();
 	private invalid: boolean = false;
 
 	constructor(
