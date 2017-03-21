@@ -18,6 +18,7 @@ export class BlogService {
 	posts: Post[];
 	filter: string;
 	blogNav: boolean = true;
+	blogfilter: string = "categories=7";
 
 	postsChange$: any;
 	private _postsObserver: Observer<any>;
@@ -52,7 +53,7 @@ export class BlogService {
 	}
 
 	getPosts(): Observable<any> {
-		let url =  this._wpBase + "posts?_embed"
+		let url =  this._wpBase + "posts?" + this.blogfilter + "&_embed"
 		let headers    = new Headers({'Content-Type': 'application/json'})
 		let options    = new RequestOptions({ headers: headers })			
 		return this.http.get(url, options)
@@ -71,7 +72,7 @@ export class BlogService {
 	}
 
 	getPostById(id: string): Observable<any> {
-		let url =  this._wpBase + "posts/" + id + "?_embed"
+		let url =  this._wpBase + "posts/" + id + "?" + this.blogfilter + "&_embed"
 		let headers    = new Headers({'Content-Type': 'application/json'})
 		let options    = new RequestOptions({ headers: headers })			
 		return this.http.get(url, options)
@@ -87,7 +88,7 @@ export class BlogService {
 
 	getPostsFiltered(filter: string) {
 		console.log(filter)
-		let url =  this._wpBase + "posts?search=" + filter +"&_embed"
+		let url =  this._wpBase + "posts?" + this.blogfilter + "&search=" + filter +"&_embed"
 		let headers    = new Headers({'Content-Type': 'application/json'})
 		let options    = new RequestOptions({ headers: headers })			
 		return this.http.get(url, options)
