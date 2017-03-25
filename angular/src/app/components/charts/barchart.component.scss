@@ -1,0 +1,47 @@
+@import '../../colors';
+
+div {
+	width: auto;
+
+	.titles {
+		width: 140px;
+		float:left;
+		text-align:right;
+		padding-right:5px;
+		border-right:2px solid black;
+
+		li {
+			max-height: 20px;
+			height:20px;
+			margin-bottom: 20px;
+			vertical-align:top;
+			font-size:25px;
+			line-height:15px;
+			font-family: sans-serif;
+			color: #5d829a;
+			font-weight: 100;
+		}
+	}
+
+	.bars {
+		margin-left:146px;
+		width: calc(100% - 145px);
+		li.bar {
+			max-height:15px;
+			height:15px;
+			background-color:$c1;		
+
+			margin-bottom:25px;
+		}
+
+	}
+
+}
+
+
+
+ul {
+	margin:0;
+	padding:0;
+	list-style-type: none;
+}

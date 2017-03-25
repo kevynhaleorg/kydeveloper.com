@@ -3,8 +3,13 @@ import { FormsModule }    from '@angular/forms';
 import { CommonModule }   from '@angular/common';
 import { RouterModule } from '@angular/router';
 
+import { SkillsService} from './skills.service'
+
+import { BarchartComponent } from '../../components/charts/barchart.component' 
 
 import { SkillsComponent } from './skills.component';
+
+
 
 
 @NgModule({
@@ -14,8 +19,12 @@ import { SkillsComponent } from './skills.component';
     FormsModule
   ],
   declarations: [
-    SkillsComponent
+    SkillsComponent,
+    BarchartComponent
   ],
-  providers: []
+  providers: [SkillsService]
 })
-export class SkillsModule {}
+export class SkillsModule {
+
+
+}

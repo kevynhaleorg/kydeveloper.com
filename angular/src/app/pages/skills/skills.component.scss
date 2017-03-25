@@ -1,1 +1,43 @@
 @import '../../colors';
+
+.row {
+	background-color:#dadada;
+	display:flex;
+	width:calc(100% + 70px);
+	max-width:calc(100% + 70px);
+	overflow:hidden;
+	margin-left:-45px;
+	padding:0px 10px;
+	margin-bottom:20px;
+	flex-wrap:wrap;
+
+	.image {
+		flex: 1;
+		margin: 10px 0;
+		text-align:center;
+
+		img {
+			display: inline-block;
+			vertical-align: middle;
+			filter: grayscale(1);
+			opacity:.3;	
+
+			&:hover {
+				filter: grayscale(0);
+				opacity:1;
+			}
+		}
+	}
+}
+
+
+
+
+.chart-cont {
+	max-width:50%;
+	height:auto;
+	@media screen and (max-width: 650px) {
+		max-width: 100%;
+
+	}
+}

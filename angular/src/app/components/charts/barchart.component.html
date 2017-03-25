@@ -1,0 +1,18 @@
+<div class="container">
+	<div class="titles">
+		<ul>
+			<li *ngFor="let skill of data">
+				{{skill.name}}
+				<img src="{{skill.image}}" height='20'>
+			</li>
+		</ul>
+	</div>
+
+	<div class="bars">
+		<ul>
+			<li *ngFor="let skill of data" class='bar' [style.width.px]="skill.width">
+
+			</li>
+		</ul>
+	</div>
+</div>
