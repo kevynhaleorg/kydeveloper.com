@@ -1,8 +1,8 @@
 <div class="container">
 	<div class="titles">
 		<ul>
-			<li *ngFor="let skill of data">
-				{{skill.name}}
+			<li *ngFor="let skill of data" (click)="setSkill(skill.name)">
+				<span [class.selected]="skill.name == set">{{skill.name}}</span>
 				<img src="{{skill.image}}" height='20'>
 			</li>
 		</ul>
@@ -10,7 +10,7 @@
 
 	<div class="bars">
 		<ul>
-			<li *ngFor="let skill of data" class='bar' [style.width.px]="skill.width">
+			<li *ngFor="let skill of data" class='bar' [style.width.px]="skill.width" [class.selected]="skill.name == set">
 
 			</li>
 		</ul>

@@ -20,6 +20,38 @@ div {
 			font-family: sans-serif;
 			color: #5d829a;
 			font-weight: 100;
+
+			img {
+				margin-left:-2px;
+			}
+
+			span {
+				position:relative;
+				top:-3px;
+				padding: 0px 7px;
+				border-radius:5px;
+				border:1px solid transparent;
+
+				&.selected {
+					background-color: #f3f3f3;
+    				border: 1px solid #dadada;
+    				font-weight: 200;
+    				color: #0197f6;
+				}
+
+				
+			}
+
+			&:hover > span {
+					background-color: #f3f3f3;
+    				border: 1px solid #dadada;
+    				font-weight: 200;
+    				//color: #0197f6;
+			}
+
+			&:hover {
+				cursor:pointer;
+			}
 		}
 	}
 
@@ -32,6 +64,10 @@ div {
 			background-color:$c1;		
 
 			margin-bottom:25px;
+
+			&.selected {
+				background-color:#9c3737;
+			}
 		}
 
 	}

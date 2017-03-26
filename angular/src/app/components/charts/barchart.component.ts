@@ -8,6 +8,7 @@ import { Component, Input, ElementRef, HostListener } from '@angular/core';
 export class BarchartComponent {
 	@Input() skills;
 
+	set: String;
 	data: any = [];
 
 	constructor(private el:ElementRef){
@@ -65,6 +66,10 @@ export class BarchartComponent {
   		else {
   			return width * (current/highest)
   		}
+  	}
+
+  	setSkill(name: String) {
+  		this.set = name;
   	}
 
 }
