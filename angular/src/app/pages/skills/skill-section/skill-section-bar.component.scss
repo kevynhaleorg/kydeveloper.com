@@ -1,0 +1,31 @@
+@import '../../../colors';
+
+.row {
+	background-color:#dadada;
+	display:flex;
+	width:calc(100% + 0px);
+	max-width:calc(100% + 0px);
+	overflow:hidden;
+	margin-left:-45px;
+	padding:0px 45px;
+	margin-bottom:30px;
+	flex-wrap:wrap;
+
+	.image {
+		flex: 1;
+		margin: 10px 0;
+		text-align:center;
+
+		img {
+			display: inline-block;
+			vertical-align: middle;
+			filter: grayscale(1);
+			opacity:.3;	
+
+			&:hover {
+				filter: grayscale(0);
+				opacity:1;
+			}
+		}
+	}
+}

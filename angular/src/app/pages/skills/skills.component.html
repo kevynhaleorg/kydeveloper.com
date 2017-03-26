@@ -1,8 +1,3 @@
-<div class="row">
-	<div *ngFor="let skill of skills" class="image">
-	<img  src="{{skill.image}}" height='50'>
-	</div>
-</div>
-<div class="chart-cont">
-	<app-barchart [skills]="skills"></app-barchart>
-</div>
+<app-skill-section [type]="'development'"></app-skill-section>
+<app-skill-section [type]="'devops'"></app-skill-section>
+<app-skill-section [type]="'design'"></app-skill-section>

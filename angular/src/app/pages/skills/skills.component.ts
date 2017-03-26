@@ -15,15 +15,8 @@ export class SkillsComponent {
 	}
 
 	ngOnInit() {
-		this.skillsService.skillsChange$.subscribe(
-			skills => this.setSkills(skills)
-		)
 
 		this.skillsService.getSkills().subscribe()
-	}
-
-	setSkills(skills:any) {
-		this.skills = skills;
 	}
 
 }

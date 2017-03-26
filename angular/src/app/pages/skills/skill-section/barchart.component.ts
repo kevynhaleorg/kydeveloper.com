@@ -28,6 +28,9 @@ export class BarchartComponent {
 
   	@HostListener('window:resize', ['$event'])
   	setData() {
+  		if (this.set == null && this.skills.length > 0) {
+  			this.set = this.skills[0].name;
+  		}
   		let itemWidth;
   		let width = this.el.nativeElement.firstElementChild.clientWidth
   		let upper = width - 147

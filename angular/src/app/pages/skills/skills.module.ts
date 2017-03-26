@@ -4,8 +4,11 @@ import { CommonModule }   from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { SkillsService} from './skills.service'
+import { SkillSectionService } from './skill-section/skill-section.service'
 
-import { BarchartComponent } from '../../components/charts/barchart.component' 
+import { SkillSectionComponent } from './skill-section/skill-section.component'
+import { SkillSectionBarComponent } from './skill-section/skill-section-bar.component'
+import { BarchartComponent } from './skill-section/barchart.component' 
 
 import { SkillsComponent } from './skills.component';
 
@@ -20,7 +23,9 @@ import { SkillsComponent } from './skills.component';
   ],
   declarations: [
     SkillsComponent,
-    BarchartComponent
+    BarchartComponent,
+    SkillSectionComponent,
+    SkillSectionBarComponent
   ],
   providers: [SkillsService]
 })

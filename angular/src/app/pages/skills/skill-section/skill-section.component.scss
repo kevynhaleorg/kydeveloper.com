@@ -1,0 +1,19 @@
+@import '../../../colors';
+
+.title {
+	text-transform: capitalize;
+	text-align:center;
+	font-size:30px;
+	margin-bottom:30px;
+	font-family: 'Exo', sans-serif;
+	color:$b1;
+}
+
+.chart-cont {
+	max-width:calc(50% - 45px);
+	height:auto;
+	@media screen and (max-width: 650px) {
+		max-width: 100%;
+
+	}
+}
