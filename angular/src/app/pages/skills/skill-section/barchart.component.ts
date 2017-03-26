@@ -1,4 +1,5 @@
 import { Component, Input, ElementRef, HostListener } from '@angular/core';
+import { SkillSectionService} from './skill-section.service'
 
 @Component({
   selector: 'app-barchart',
@@ -11,7 +12,9 @@ export class BarchartComponent {
 	set: String;
 	data: any = [];
 
-	constructor(private el:ElementRef){
+	constructor(
+    private el:ElementRef,
+    private skillSectionService: SkillSectionService){
 
   	}
 
@@ -19,6 +22,12 @@ export class BarchartComponent {
   		if (this.skills) {
   			this.setData()
   		}
+
+      this.set = this.skillSectionService.getSet()
+      this.skillSectionService.setChange$.subscribe(
+        set => this.set = set
+      )
+
   	}
 
   	ngOnChanges() {
@@ -27,10 +36,7 @@ export class BarchartComponent {
   	}
 
   	@HostListener('window:resize', ['$event'])
-  	setData() {
-  		if (this.set == null && this.skills.length > 0) {
-  			this.set = this.skills[0].name;
-  		}
+  	setData() {  
   		let itemWidth;
   		let width = this.el.nativeElement.firstElementChild.clientWidth
   		let upper = width - 147
@@ -72,7 +78,7 @@ export class BarchartComponent {
   	}
 
   	setSkill(name: String) {
-  		this.set = name;
+  		this.skillSectionService.setSet(name);
   	}
 
 }

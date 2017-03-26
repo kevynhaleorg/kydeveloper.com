@@ -21,10 +21,15 @@
 			vertical-align: middle;
 			filter: grayscale(1);
 			opacity:.3;	
+			height: 50px;
 
 			&:hover {
 				filter: grayscale(0);
 				opacity:1;
+			}
+			@media screen and (max-width: 650px) {
+				height:30px;
+
 			}
 		}
 	}

@@ -7,6 +7,10 @@
 	margin-bottom:30px;
 	font-family: 'Exo', sans-serif;
 	color:$b1;
+
+	&.hide {
+		display: none;
+	}
 }
 
 .chart-cont {

@@ -1,5 +1,5 @@
 <app-skill-section-bar [skills]="skills"></app-skill-section-bar>
-<div class='title'>
+<div class='title' [class.hide]="skills.length == 0">
 {{type}}
 </div>
 <div class="chart-cont">
