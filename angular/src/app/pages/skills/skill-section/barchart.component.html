@@ -10,7 +10,7 @@
 
 	<div class="bars">
 		<ul>
-			<li *ngFor="let skill of data" class='bar' [style.width.px]="skill.width" [class.selected]="skill.name == set">
+			<li *ngFor="let skill of data" class='bar' [style.width.px]="skill.width" [class.selected]="skill.name == set" (click)="setSkill(skill.name)">
 
 			</li>
 		</ul>

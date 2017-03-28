@@ -2,6 +2,12 @@
 <div class='title' [class.hide]="skills.length == 0">
 {{type}}
 </div>
-<div class="chart-cont">
-	<app-barchart [skills]="skills"></app-barchart>
+<div class="skills">
+	<div class="chart-cont">
+		<app-barchart [skills]="skills"></app-barchart>
+	</div>
+	<div class="gutter"></div>
+	<div class="single-skill">
+		<app-skill-description></app-skill-description>
+	</div>
 </div>

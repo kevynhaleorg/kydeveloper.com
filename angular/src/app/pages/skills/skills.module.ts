@@ -8,6 +8,7 @@ import { SkillSectionService } from './skill-section/skill-section.service'
 
 import { SkillSectionComponent } from './skill-section/skill-section.component'
 import { SkillSectionBarComponent } from './skill-section/skill-section-bar.component'
+import { SkillDescriptionComponent } from './skill-section/skill-description.component'
 import { BarchartComponent } from './skill-section/barchart.component' 
 
 import { SkillsComponent } from './skills.component';
@@ -25,7 +26,8 @@ import { SkillsComponent } from './skills.component';
     SkillsComponent,
     BarchartComponent,
     SkillSectionComponent,
-    SkillSectionBarComponent
+    SkillSectionBarComponent,
+    SkillDescriptionComponent
   ],
   providers: [SkillsService]
 })

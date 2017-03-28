@@ -2,7 +2,7 @@
 
 div {
 	margin-bottom:40px;
-	
+
 	width: auto;
 
 	.titles {
@@ -66,6 +66,10 @@ div {
 			background-color:$c1;		
 
 			margin-bottom:25px;
+
+			&:hover {
+				cursor:pointer;
+			}
 
 			&.selected {
 				background-color:#9c3737;
