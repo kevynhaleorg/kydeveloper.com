@@ -2,6 +2,7 @@ import { NgModule }       from '@angular/core';
 import { FormsModule }    from '@angular/forms';
 import { CommonModule }   from '@angular/common';
 import { RouterModule } from '@angular/router';
+import {DisqusModule} from "ng2-awesome-disqus";
 
 
 import { BlogComponent } from './blog.component';
@@ -18,7 +19,8 @@ import { ParseWordpressJSON } from '../../util/parseWordpressJSON'
   imports: [
   	RouterModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    DisqusModule
   ],
   declarations: [
     BlogComponent,

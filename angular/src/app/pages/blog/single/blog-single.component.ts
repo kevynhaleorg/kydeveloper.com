@@ -18,6 +18,7 @@ export class BlogSingleComponent {
 	private id: string;
 	private post: Post = new Post();
 	private invalid: boolean = false;
+	private shortname: string = 'kydeveloper'
 
 	constructor(
 		private route: ActivatedRoute,
