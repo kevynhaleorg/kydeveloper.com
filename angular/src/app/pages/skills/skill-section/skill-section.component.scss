@@ -7,10 +7,6 @@
 	margin-bottom:30px;
 	font-family: 'Exo', sans-serif;
 	color:$b1;
-
-	&.hide {
-		display: none;
-	}
 }
 
 .skills {
@@ -39,7 +35,6 @@
 
 		display:block;
 		.chart-cont {
-			background-color:red;
 			max-width:100%;
 		}	
 
@@ -50,8 +45,11 @@
 		.single-skill {
 			width:100%;
 			max-width:100%;	
-			background-color:blue;
 		}
 
 	}
+}
+
+.hide {
+	display: none;
 }

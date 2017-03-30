@@ -46,7 +46,6 @@ export class BarchartComponent {
   		let data = []
   		this.skills.forEach(function(skill, scope) {
   			itemWidth = this.getBarWidth(highest, upper, skill.count, lower)
-  			console.log(itemWidth)
   			data.push({
   				'name': skill.name,
   				'count': skill.count,

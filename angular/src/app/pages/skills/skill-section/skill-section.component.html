@@ -7,7 +7,7 @@
 		<app-barchart [skills]="skills"></app-barchart>
 	</div>
 	<div class="gutter"></div>
-	<div class="single-skill">
-		<app-skill-description></app-skill-description>
+	<div class="single-skill" [class.hide]="skills.length == 0">
+		<app-skill-description [skills]="skills"></app-skill-description>
 	</div>
 </div>

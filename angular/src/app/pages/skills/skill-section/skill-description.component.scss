@@ -3,4 +3,38 @@ div.title {
 	margin:0px;
 	font-size:30px;
 	font-family:sans-serif;
+	font-weight:100;
+	text-transform:capitalize;
+
+	.words {
+		display:inline-block;
+		width:175px;
+	}
+
+	.arrow {
+		line-height: 27px;
+	    display: inline-block;
+	    margin: 0px;
+	    border-radius: 50%;
+	    border: 1px solid #dadada;
+	    width: 30px;
+	    height: 33px;
+	    position: relative;
+	    top: -3px;
+	    color:gray;
+
+	    &.left {
+	    	padding-right: 3px;
+	    }
+
+	    &.right {
+	    	padding-left: 3px;
+	    }
+
+
+		&:hover {
+			cursor:pointer;
+			border: 1px solid #0197F6;
+		}
+	}
 }
