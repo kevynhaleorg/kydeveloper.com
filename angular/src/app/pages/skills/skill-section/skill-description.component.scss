@@ -1,3 +1,5 @@
+@import '../../../colors';
+
 div.title {
 	text-align:center;
 	margin:0px;
@@ -5,6 +7,7 @@ div.title {
 	font-family:sans-serif;
 	font-weight:100;
 	text-transform:capitalize;
+	margin-bottom:20px;
 
 	.words {
 		display:inline-block;
@@ -35,6 +38,70 @@ div.title {
 		&:hover {
 			cursor:pointer;
 			border: 1px solid #0197F6;
+		}
+	}
+}
+.body {
+	max-width:400px;
+	margin:0 auto;
+	border: 1px solid #dadada;
+    padding: 10px;
+    background-color: #f3f3f3;
+
+	.section-title {
+		text-align:left;
+		margin:15px 0px;
+		font-size:20px;
+		font-family:sans-serif;
+		font-weight:400;
+		text-transform: uppercase;
+		color:$c1;
+	}
+
+	ul {
+		padding:0px;
+		margin:0px;
+		list-style-type:none;
+		a, a:visited, a:active, a:focus {
+			text-decoration:none;
+			li {
+				width: calc(100% - 10px);
+				background-color:white;
+				padding: 5px;
+				border:1px solid #dadada;
+				margin-bottom: 5px;
+				display:flex;
+				min-height:50px;
+
+				div {
+
+					&.item-title {
+						padding: 0 10px;
+					    font-family: sans-serif;
+					    font-weight: 300;
+					    color: #29545b;
+					    text-decoration: none;
+					    font-size: 18px;
+					    line-height:25px;
+					    position:relative;
+					    top:5px;
+					    margin-bottom: 5px;
+					}
+
+					&.image {
+						height:50px;
+						min-width: 65px;
+						max-width: 6px;
+						text-align:center;
+					}
+				}
+
+				&:hover {
+					cursor:pointer;
+					border: 1px solid #0197F6;
+				}	
+
+			}
 		}
 	}
 }

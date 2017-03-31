@@ -9,7 +9,14 @@
 		</div>
 	<div class="gutter"></div>
 </div>
-<disqus [shortname]="shortname" [identifier]="post.id" ></disqus>
+<div class="post">
+	<div class="gutter"></div>
+	<div class="middle">
+		<disqus [shortname]="shortname" [identifier]="post.id" ></disqus>
+	</div>
+	<div class="gutter"></div>
+</div>
+
 
 
 <div *ngIf="invalid">

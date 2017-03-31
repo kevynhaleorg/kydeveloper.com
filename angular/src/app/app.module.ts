@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {DisqusModule} from "ng2-awesome-disqus";
 
 import { AppRouterModule } from './app-routing.module'
 import { AboutModule } from './pages/about/about.module'
@@ -29,7 +28,6 @@ import { SideIconsComponent } from './components/sideicons/sideicons.component'
     BrowserModule,
     FormsModule,
     HttpModule,
-    DisqusModule,
     AppRouterModule,
     AboutModule,
     ContactModule,

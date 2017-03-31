@@ -10,6 +10,10 @@ export class SkillDescriptionComponent {
 	@Input() skills: any;
 	set: string;
 
+  blogs: string[] = [];
+  projects: string[] = [];
+  experiences: string[] = [];
+
 	constructor(
     private skillSectionService: SkillSectionService){
 
@@ -18,10 +22,23 @@ export class SkillDescriptionComponent {
   	ngOnInit() {
       this.set = this.skillSectionService.getSet()
       this.skillSectionService.setChange$.subscribe(
-        set => this.set = set
+        set => this.prepareSet(set)
       )
 
   	}
+
+    prepareSet(set) {
+      this.set = set
+
+      this.skillSectionService.getSkill(set, 'blog')
+          .subscribe( data => this.blogs = data )
+
+      this.skillSectionService.getSkill(set, 'project')
+          .subscribe( data => this.projects = data )
+
+      this.skillSectionService.getSkill(set, 'work-experience')
+          .subscribe( data => this.experiences= data )
+    }
 
   	setNext() {
   		let index = this.getSlugIndex(this.skills, this.set)
