@@ -1,3 +1,39 @@
+
+<app-skill-side-icons></app-skill-side-icons>
+<div class="body">
+
+</div>
+<div class="overlay">
+
+</div>
+<div class="overlay-container">
+	<i class="material-icons toggle-nav open" (click)="toggleBlogNav();inputFocus(filter)" [class.sticky]="stickySearch">keyboard_arrow_down</i>
+	<div class="title">Got Skills?</div>
+	<div class="buttons">
+		<ul>
+			<a routerLink="/skills" fragment="devops" (click)="anchorClick()">
+				<li class="devops">Devops</li>
+			</a>
+			<a routerLink="/skills" fragment="development" (click)="anchorClick()">
+				<li class="development">Development</li>
+			</a>
+			<a routerLink="/skills" fragment="design" (click)="anchorClick()">
+				<li class="design">Design</li>
+			</a>
+		</ul>
+	</div>
+	<a id="skill-search"></a>
+	<div class="search-outer"[class.sticky]="stickySearch" [class.hide-nav]="!skillNav">
+		<div class="search" >
+			<div class="center">
+				<span (click)="inputFocus(filter)"><i class="material-icons">search</i>Skills</span>
+				<input #filter type="text"  name="search" placeholder="search" (input)="searchSkills($event.target.value)" [class.loading-hide]="!hideLoading">
+				<i class="material-icons toggle-nav close" (click)="toggleBlogNav()">keyboard_arrow_up</i>
+				<i class="material-icons loading" [class.loading-hide]="hideLoading">autorenew</i>
+			</div>
+		</div>
+	</div>
+</div>
 <app-skill-section [type]="'development'"></app-skill-section>
 <app-skill-section [type]="'devops'"></app-skill-section>
 <app-skill-section [type]="'design'"></app-skill-section>

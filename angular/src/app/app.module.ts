@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import {Ng2PageScrollModule} from 'ng2-page-scroll';
 
 import { AppRouterModule } from './app-routing.module'
 import { AboutModule } from './pages/about/about.module'
@@ -28,6 +29,7 @@ import { SideIconsComponent } from './components/sideicons/sideicons.component'
     BrowserModule,
     FormsModule,
     HttpModule,
+    Ng2PageScrollModule,
     AppRouterModule,
     AboutModule,
     ContactModule,

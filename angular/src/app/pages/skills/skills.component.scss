@@ -1,5 +1,245 @@
 @import '../../colors';
 
+.body {
+	margin-top:-15px;
+	margin-bottom:-30px;
+	position:relative;
+	left:-45px;
+	width: calc(100% + 90px);
+	background-image: url("images/wood.jpg");
+	opacity:.4;
+	height: 500px;
+
+	
+}
+.overlay {
+		position:absolute;
+		top:0px;
+		left: -45px;
+		width:calc(100% + 45px);
+		height:500px;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#29545b+0,193238+100 */
+		background: #29545b; /* Old browsers */
+		background: -moz-linear-gradient(top,  #29545b 0%, #193238 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  #29545b 0%,#193238 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  #29545b 0%,#193238 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#29545b', endColorstr='#193238',GradientType=0 ); /* IE6-9 */
+		opacity:.9;
+
+}
+
+.toggle-nav {
+	font-size: 40px;
+	color: #aaaaaa;
+	transition: color 500ms ease;
+
+	&:hover {
+		cursor: pointer;
+		color: $a1;
+	}
+
+}
+
+.overlay-container {
+	position: absolute;
+    top: 15px;
+    width: calc(100% - 150px);
+    padding: 30px;
+    max-height: 500px;
+    color: white;
+    font-size: 40px;
+    div.title {
+    	font-size:80px;
+    	font-family: 'Exo', sans-serif;
+    	text-align:center;
+    }
+    div.search-outer{
+    	position:relative;
+    	width:100%;
+
+	    div.search {
+	    	width:60%;
+	    	margin:0 auto;
+	    	position: relative;
+	    	transition: width .5s, max-height 0.5s;	
+
+	    	div.center {
+	    		width:100%;
+		    	input {
+		    		width: 100%;
+				    padding: 5px;
+				    font-size: 18px;
+				    border-radius: 5px;
+				    border: 0px;
+				    background-color: white;
+		    	}
+
+		    	span {
+		    		display:none;
+		    	}
+		    	i {
+		    		display:none;
+		    	}
+	    	}
+	    }
+
+	    &.sticky {
+	    	position:fixed;
+	    	z-index:20;
+	    	top:60px;
+	    	left:0px;
+	    	width:100%;
+
+	    	
+
+	    	div.search {
+	    		width:100%;
+	    		height: 50px;
+    			max-height: 50px;
+			    z-index: 13;
+			    background-color: #ebebeb;
+			    overflow: hidden;
+
+	    		div.center {
+	    			width:60%;
+	    			margin:0 auto;
+	    			position:relative;
+	    			font-family: 'Exo', sans-serif;
+    				color: #46a346;
+    				line-height:50px;
+    				font-size:18px;
+
+    				@media screen and (max-width: 650px) {
+						width: 80%;
+
+					}
+
+		    		input {
+		    			width: calc(100% - 135px);
+					    height: 38px;
+					    border-top: 0px;
+					    border-left: 0px;
+					    border-right: 0px;
+					    border-bottom: 5px solid #d6d6d6;
+					    font-size: 30px;
+					    background-color: #ebebeb;
+					    padding-left: 90px;
+					    padding-right: 45px;
+					    transition: border 500ms linear;
+					    color: #308c30;
+					    font-weight: 300;
+
+					    &:focus, &:active {
+					    	outline:none;
+					    	border-bottom:5px solid $c1;
+					    }
+		    		}
+
+		    		span {
+						position:absolute;	
+						display:inline;
+						i {
+							position:relative;
+							display:inline;
+							top:5px;
+						}
+					}	
+
+					.close {
+					    position: absolute;
+					    top: 5px;
+					    right: 3px;
+					    display:block;
+					}	
+
+					.loading {
+						position: absolute;
+						top:9px;
+						right: 35px;
+						font-size: 35px;
+						color: #aaaaaa;
+	    				animation: rotating 1.5s linear infinite;
+	    				opacity:1;
+	    				transition: opacity .3s ease;
+	    				display:block;
+					}	
+
+					i.loading-hide {
+						opacity: 0;
+					}
+	    		}
+	    	}
+
+	    	&.hide-nav {
+				max-height:0px;
+
+				div.search {
+					max-height:0px;
+				}
+			}
+	    }
+	}
+    div.buttons {
+    	margin-bottom:15px;
+    	ul {
+    		margin:0px;
+    		padding:0px;
+    		text-align:center;
+
+    		a {
+				    font-family: 'Play', sans-serif;
+				    color: transparent;
+    			li {
+    				display:inline-block;
+    				padding: 3px 18px;
+				    border-radius: 20px;
+				    font-size:30px;
+				    box-shadow: 2px 2px 5px #1f3e43, inset 1px 1px 0px rgba(255, 255, 255, 0.5);
+				    color:#1f3e43;
+				    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
+				    font-weight:bold;
+
+    				&.design {
+    					background-color:gold;
+    				}
+
+    				&.development {
+						background-color:#ff7600;
+    				}
+
+    				&.devops {
+    					background-color:orange;
+    				}
+
+    				&:hover {
+    					cursor:pointer;
+    					box-shadow: 3px 3px 5px #14262a;
+
+    				}
+
+    			}
+    		}
+    	}
+    }
+
+    @media screen and (max-width: 650px) {
+		div.title {
+			font-size:50px;
+		}
+		div.buttons {
+			ul {
+				a {
+					li {
+						font-size:25px;
+					}
+				}
+			}
+		}
+
+	}
+
+}
+
 .row {
 	background-color:#dadada;
 	display:flex;
@@ -29,7 +269,16 @@
 		}
 	}
 }
+.open {
+	display:none;
 
+	&.sticky {
+		display:block;
+		position: fixed;
+		right: 2px; 
+		top: 65px;
+	}
+}
 
 
 
