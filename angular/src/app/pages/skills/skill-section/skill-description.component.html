@@ -1,47 +1,49 @@
-<div class="title">
-	<span class="arrow left" (click)="setPrev()"><</span>
-	<span class="words">{{set}}</span>
-	<span class="arrow right" (click)="setNext()">></span>
-</div>  
-<div class="body">
-	<div class="section-title" *ngIf="blogs.length > 0">Blog</div>
-	<ul>
-		<a *ngFor="let blog of blogs" routerLink="/blog/post/{{blog.id}}">
-			<li>
-				<div class="image">
-					<img src="{{blog.thumbnail}}" height="50">
-				</div>
-				<div class="item-title">
-					{{blog.title}}
-				</div>
-			</li>
-		</a>
-	</ul>
-	<div class="section-title" *ngIf="projects.length > 0">Projects</div>
-	<ul>
-		<a *ngFor="let project of projects" routerLink="/project/post/{{project.id}}">
-			<li>
-				<div class="image">
-					<img src="{{project.thumbnail}}" height="50">
-				</div>
-				<div class="item-title">
-					{{project.title}}
-				</div>
-			</li>
-		</a>
-	</ul>
-	<div class="section-title" *ngIf="experiences.length > 0">Work Experience</div>
-	<ul>
-		<a *ngFor="let experience of experiences" routerLink="/experience/post/{{experience.id}}">
-			<li>
-				<div class="image">
-					<img src="{{experience.thumbnail}}" height="50">
-				</div>
-				<div class="item-title">
-					{{experience.title}}
-				</div>
-			</li>
-		</a>
-	</ul>
+<div class="container">
+	<div class="title">
+		<span class="arrow left" (click)="setPrev()"><</span>
+		<span class="words">{{set}}</span>
+		<span class="arrow right" (click)="setNext()">></span>
+	</div>  
+	<div class="body">
+		<div class="section-title" *ngIf="blogs.length > 0">Blog</div>
+		<ul>
+			<a *ngFor="let blog of blogs" routerLink="/blog/post/{{blog.id}}">
+				<li>
+					<div class="image">
+						<img src="{{blog.thumbnail}}" height="50">
+					</div>
+					<div class="item-title">
+						{{blog.title}}
+					</div>
+				</li>
+			</a>
+		</ul>
+		<div class="section-title" *ngIf="projects.length > 0">Projects</div>
+		<ul>
+			<a *ngFor="let project of projects" routerLink="/project/post/{{project.id}}">
+				<li>
+					<div class="image">
+						<img src="{{project.thumbnail}}" height="50">
+					</div>
+					<div class="item-title">
+						{{project.title}}
+					</div>
+				</li>
+			</a>
+		</ul>
+		<div class="section-title" *ngIf="experiences.length > 0">Work Experience</div>
+		<ul>
+			<a *ngFor="let experience of experiences" routerLink="/experience/post/{{experience.id}}">
+				<li>
+					<div class="image">
+						<img src="{{experience.thumbnail}}" height="50">
+					</div>
+					<div class="item-title">
+						{{experience.title}}
+					</div>
+				</li>
+			</a>
+		</ul>	
 
+	</div>
 </div>
