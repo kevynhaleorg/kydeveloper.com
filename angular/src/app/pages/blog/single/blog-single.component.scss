@@ -66,6 +66,10 @@ a, a:active, a:visited, a:focus{
 		    color: rgba(0,0,0,.8);
 		    font-size: 18px;
 		    line-height: 1.4;
+
+		    
+
+
 		}
 
 	}
@@ -89,4 +93,12 @@ a, a:active, a:visited, a:focus{
    		}
  		
 	}
+}
+
+:host /deep/ .image-container {
+	display:inline-block;
+}
+
+:host /deep/ .wp-images {
+	width:100%;
 }

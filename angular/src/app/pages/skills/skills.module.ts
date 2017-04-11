@@ -12,7 +12,7 @@ import { SkillSectionBarComponent } from './skill-section/skill-section-bar.comp
 import { SkillDescriptionComponent } from './skill-section/skill-description.component'
 import { SkillSideIconsComponent } from './skill-section/skill-side-icons.component'
 import { BarchartComponent } from './skill-section/barchart.component' 
-
+import { SkillDropdownComponent } from './skill-dropdown/skill-dropdown.component'
 import { SkillsComponent } from './skills.component';
 
 
@@ -30,7 +30,8 @@ import { SkillsComponent } from './skills.component';
     SkillSectionComponent,
     SkillSectionBarComponent,
     SkillDescriptionComponent,
-    SkillSideIconsComponent
+    SkillSideIconsComponent,
+    SkillDropdownComponent
   ],
   providers: [SkillsService, PageScrollService]
 })

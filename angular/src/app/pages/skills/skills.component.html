@@ -7,7 +7,7 @@
 
 </div>
 <div class="overlay-container">
-	<i class="material-icons toggle-nav open" (click)="toggleBlogNav();inputFocus(filter)" [class.sticky]="stickySearch">keyboard_arrow_down</i>
+	<i class="material-icons toggle-nav open" (click)="toggleBlogNav($event);inputFocus(filter)" [class.sticky]="stickySearch">keyboard_arrow_down</i>
 	<div class="title">Got Skills?</div>
 	<div class="buttons">
 		<ul>
@@ -25,11 +25,20 @@
 	<a id="skill-search"></a>
 	<div class="search-outer"[class.sticky]="stickySearch" [class.hide-nav]="!skillNav">
 		<div class="search" >
-			<div class="center">
+			<div class="center centersticky">
 				<span (click)="inputFocus(filter)"><i class="material-icons">search</i>Skills</span>
 				<input #filter type="text"  name="search" placeholder="search" (input)="searchSkills($event.target.value)" [class.loading-hide]="!hideLoading">
-				<i class="material-icons toggle-nav close" (click)="toggleBlogNav()">keyboard_arrow_up</i>
+				<i class="material-icons toggle-nav close" (click)="toggleBlogNav($event)">keyboard_arrow_up</i>
 				<i class="material-icons loading" [class.loading-hide]="hideLoading">autorenew</i>
+				<div class="dropdown centersticky" [class.show-dropdown]="showDropdown">
+					<div class="loading centersticky" [class.show-loading]="showLoading">
+						<img src="images/ring.svg">
+					</div>
+					<div *ngFor="let skill of filterSkills" class="skillrow centersticky">
+					<img src="{{skill.image}}" height='20'>
+						{{skill.name}} <div class="count">{{skill.count}}</div>
+					</div>	
+				</div>
 			</div>
 		</div>
 	</div>
