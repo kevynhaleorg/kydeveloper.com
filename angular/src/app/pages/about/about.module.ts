@@ -3,6 +3,9 @@ import { FormsModule }    from '@angular/forms';
 import { CommonModule }   from '@angular/common';
 import { RouterModule } from '@angular/router';
 
+import { AboutService } from './about.service'
+import { ParseWordpressJSON } from '../../util/parseWordpressJSON'
+
 
 import { AboutComponent } from './about.component';
 
@@ -16,6 +19,6 @@ import { AboutComponent } from './about.component';
   declarations: [
     AboutComponent
   ],
-  providers: []
+  providers: [AboutService, ParseWordpressJSON]
 })
 export class AboutModule {}

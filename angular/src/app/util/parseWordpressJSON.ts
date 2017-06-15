@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core'
+	import {Injectable} from '@angular/core'
 
 import { Post } from '../classes/wordpress/post'
 import { Term } from '../classes/wordpress/tag'
@@ -98,5 +98,13 @@ export class ParseWordpressJSON {
 	convertGMT(date: string) {
 		console.log(date)
 		return moment(date + " +0000", "YYYY-MM-DDTHH:mm:ss Z").format("MMM DD, YYYY")
+	}
+
+	convertPage(page: any, image: any) {
+		return {
+			id: parseInt(page.id),
+			content: page.content.rendered,
+			image: image
+		}
 	}
 }

@@ -1,1 +1,61 @@
 @import '../../colors';
+
+
+.namebox {
+	width: 100%;
+    /* background-color: gray; */
+    height: 30px;
+    display: flex;
+    border-bottom: 2px solid #b1bec0;
+    margin-bottom: 60px;
+
+	.section {
+		flex:1;
+
+		&.name {
+			background-color:white;
+			font-size:35px;
+			text-align:center;
+			height:50px;
+			line-height:60px;
+			max-width:210px;
+			font-weight:100;
+			min-width:210px;
+			font-family: 'Play', sans-serif;
+			color:#1a3d33;
+
+		}
+	}
+
+}
+
+.info {
+	margin-bottom:30px;
+	width:100%;
+	position:relative;
+
+	.img {
+		max-width:40%;
+		margin:0px auto;
+		position:relative;
+
+		@media screen and (max-width: 1000px) {
+			max-width: 60%;
+		}
+
+		@media screen and (max-width: 750px) {
+			max-width: 80%;
+		}
+
+		@media screen and (max-width: 500px) {
+			max-width: 100%;
+		}
+		img {
+			width: 100%;
+			text-align:center;
+			filter: grayscale(.7);
+			opacity:.9;	
+
+		}
+	}
+}
